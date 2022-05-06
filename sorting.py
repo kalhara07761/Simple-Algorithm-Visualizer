@@ -180,7 +180,7 @@ print("By kalhara tennakoon \n Github : https://www.github.com/kalhara07761")
 print(bcolors.OKBLUE +"#" * 50+ bcolors.ENDC)
 
 n = int(input(bcolors.WARNING +"Enter the number of elements:"+ bcolors.ENDC))
-al = int(input("Choose algorithm: \n 1.Bubble \n 2.Insertion \n 3.Quick \n 4.Selection \n 5.Merge Sort \n 6.Heapify \n 7.Shell \n 8.Count sort \n:"))
+al = int(input("Choose algorithm: \n 1.Bubble \n 2.Insertion \n 3.Quick \n 4.Selection \n 5.Merge Sort \n 6.Heap Sort \n 7.Shell \n 8.Count sort \n:"))
 array = [i + 1 for i in range(n)]
 random.seed(0)
 random.shuffle(array)
