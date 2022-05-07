@@ -173,18 +173,21 @@ def clearConsole():
 clearConsole()
 
 print(bcolors.OKBLUE +"*" * 50+ bcolors.ENDC)
-print(bcolors.WARNING +"Simple Algorithm Visualizer" + bcolors.ENDC)
+print(bcolors.WARNING +"Simple Algorithm Visualizer (Y | N)" + bcolors.ENDC)
 print(bcolors.OKBLUE +"*" * 50+ bcolors.ENDC)
 print(bcolors.OKBLUE +"#" * 50+ bcolors.ENDC)
 print("By kalhara tennakoon \n Github : https://www.github.com/kalhara07761")
 print(bcolors.OKBLUE +"#" * 50+ bcolors.ENDC)
 
 n = int(input(bcolors.WARNING +"Enter the number of elements:"+ bcolors.ENDC))
+video= str(input(bcolors.WARNING +"Do you what to save the animation as a video:"+ bcolors.ENDC))
 al = int(input("Choose algorithm: \n 1.Bubble \n 2.Insertion \n 3.Quick \n 4.Selection \n 5.Merge Sort \n 6.Heap Sort \n 7.Shell \n 8.Count sort \n:"))
 array = [i + 1 for i in range(n)]
 random.seed(0)
 random.shuffle(array)
 print("Array",array)
+
+
 
 if(al==1):
     title = "Bubble Sort"
@@ -233,10 +236,10 @@ def update_plot(array, rec, epochs):
 
 anima = anim.FuncAnimation(fig, func=update_plot, fargs=(bar_rec, epochs), frames=algo, interval=1, repeat=False)
 
-#save as a video
+#save as mp4 video
 
-
-
-
-plt.show()
-
+if(video=="Y" or video=="y"):
+    anima.save('{}.mp4'.format(title), writer='ffmpeg', fps=60, extra_args=['-vcodec', 'libx264'])
+    plt.show()
+else:
+    plt.show()
