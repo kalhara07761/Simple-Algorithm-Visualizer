@@ -10,7 +10,7 @@ def swap(A, i, j):
     a = A[j]
     A[j] = A[i]
     A[i] = a
-    # also in python A[i],A[j]=A[j],A[i]
+
 
 
 def sort_buble(arr):
@@ -182,7 +182,7 @@ print(bcolors.OKBLUE +"#" * 50+ bcolors.ENDC)
 n = int(input(bcolors.WARNING +"Enter the number of elements:"+ bcolors.ENDC))
 video= str(input(bcolors.WARNING +"Do you what to save the animation as a video:"+ bcolors.ENDC))
 al = int(input("Choose algorithm: \n 1.Bubble \n 2.Insertion \n 3.Quick \n 4.Selection \n 5.Merge Sort \n 6.Heap Sort \n 7.Shell \n 8.Count sort \n:"))
-array = [i + 1 for i in range(n)]
+array = [i  + 1 for i in range(n)]
 random.seed(0)
 random.shuffle(array)
 print("Array",array)
